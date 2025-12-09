@@ -1,23 +1,28 @@
 <?php
-// config.php
-// Atualize com suas credenciais do MySQL
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'geptech');
-define('DB_USER', 'seu_usuario');
-define('DB_PASS', 'sua_senha');
-define('DB_CHARSET', 'utf8mb4');
 
-$options = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-];
+// Carrega variáveis do arquivo .env
+$envPath = __DIR__ . '/.env';
 
-function getPDO() {
-    static $pdo = null;
-    global $options;
-    if ($pdo === null) {
-        $dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=' . DB_CHARSET;
-        $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
-    }
-    return $pdo;
+if (file_exists($envPath)) {
+    $env = parse_ini_file($envPath);
+} else {
+    die("Erro: arquivo .env não encontrado.");
+}
+
+// Define constantes usando o .env
+define('DB_HOST', $env['DB_HOST'] ?? 'localhost');
+define('DB_NAME', $env['DB_NAME'] ?? '');
+define('DB_USER', $env['DB_USER'] ?? '');
+define('DB_PASS', $env['DB_PASS'] ?? '');
+
+// Conexão
+try {
+    $conn = new PDO(
+        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME,
+        DB_USER,
+        DB_PASS,
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
+} catch (PDOException $e) {
+    die("ERRO DE CONEXÃO: " . $e->getMessage());
 }
