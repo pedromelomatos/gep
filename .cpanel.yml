@@ -1,0 +1,6 @@
+deployment:
+  tasks:
+    - echo "Iniciando deploy via cPanel"
+    - export SOURCE_DIR="$DEPLOY_DIR"
+    - /bin/cp -r "$SOURCE_DIR/"* "/home1/simplifica/public_html/grupos/gep/"
+    - echo "Deploy concluído"
