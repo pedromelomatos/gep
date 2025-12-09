@@ -19,38 +19,51 @@ $rows = $stmt->fetchAll();
 ?>
 <!doctype html>
 <html lang="pt-br">
+
 <head>
-<meta charset="utf-8">
-<title>Admin - Envios de Contato</title>
-<style>
-  body { font-family: Arial, sans-serif; padding: 20px; }
-  table { border-collapse: collapse; width: 100%; margin-top: 12px; }
-  th, td { padding: 8px; border: 1px solid #ddd; text-align: left; }
-  th { background: #f7f7f7; }
-</style>
+    <meta charset="utf-8">
+    <title>Admin - Envios de Contato</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/css.css" />
+    <link rel="stylesheet" href="estilos/admin.css" />
 </head>
+
 <body>
-  <h1>Envios de Contato</h1>
-  <p><a href="index.html">Voltar ao site</a></p>
-  <table>
-    <thead>
-      <tr><th>ID</th><th>Nome</th><th>Telefone</th><th>Interesse</th><th>Data</th></tr>
-    </thead>
-    <tbody>
-      <?php if (empty($rows)): ?>
-        <tr><td colspan="5">Nenhum contato encontrado.</td></tr>
-      <?php else: ?>
-        <?php foreach ($rows as $r): ?>
-          <tr>
-            <td><?= htmlspecialchars($r['id']) ?></td>
-            <td><?= htmlspecialchars($r['nome']) ?></td>
-            <td><?= htmlspecialchars($r['telefone']) ?></td>
-            <td><?= htmlspecialchars($r['unidade']) ?></td>
-            <td><?= htmlspecialchars($r['created_at']) ?></td>
-          </tr>
-        <?php endforeach; ?>
-      <?php endif; ?>
-    </tbody>
-  </table>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Envios de Contato</h1>
+            <p><a href="index.html" class="btn-voltar">Voltar ao site</a></p>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Interesse</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (empty($rows)): ?>
+                    <tr>
+                        <td colspan="5">Nenhum contato encontrado.</td>
+                    </tr>
+                <?php else: ?>
+                    <?php foreach ($rows as $r): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($r['id']) ?></td>
+                            <td><?= htmlspecialchars($r['nome']) ?></td>
+                            <td><?= htmlspecialchars($r['telefone']) ?></td>
+                            <td><?= htmlspecialchars($r['unidade']) ?></td>
+                            <td><?= htmlspecialchars($r['created_at']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+    <script src="scripts/admin.js"></script>
 </body>
+
 </html>

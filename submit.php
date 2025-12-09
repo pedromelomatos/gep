@@ -21,7 +21,7 @@ $unidade = isset($_POST['unidade']) ? clean_string($_POST['unidade']) : '';
 $errors = [];
 
 if ($nome === '') $errors[] = 'Nome é obrigatório.';
-$validUnidades = ['parceria','aluno','mentor'];
+$validUnidades = ['dev_software', 'recrutamento', 'consultoria', 'outros'];
 if (!in_array($unidade, $validUnidades, true)) $errors[] = 'Selecione um interesse válido.';
 
 if (!empty($errors)) {

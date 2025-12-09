@@ -1,8 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     font-family: 'Sen', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* Prevent horizontal scrollbar/whitespace */
+}
+
+body {
+    background-image: url('../imagens/fundo_tech.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #eee;
 }
 
 main {
@@ -22,21 +38,25 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: navy;
-    padding: 15px;
+    background: rgba(0, 0, 50, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 5px;
     margin: 0;
-    gap: 10px;
+    gap: 5px;
 }
 
 nav ul li {
     flex: 1;
     text-align: center;
+    white-space: nowrap;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px;
+    font-size: 0.9em;
     display: inline-block;
 }
 
@@ -50,17 +70,31 @@ nav ul li a:hover {
 
 .mainHeader {
     text-align: center;
-    padding: 100px;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    scroll-snap-align: start;
 }
 
 .tituloDecor {
     position: relative;
     display: inline-block;
     padding: 50px 60px;
-    color: navy;
+    color: transparent;
+    background: linear-gradient(90deg, #ffffff 0%, #00ffff 100%);
+    /* Bright White to Cyan */
+    -webkit-background-clip: text;
+    background-clip: text;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 3.5em;
     z-index: 1;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+    /* Dark shadow to lift text off the glow */
+    text-shadow: none;
 }
 
 .tituloDecor::before {
@@ -70,12 +104,12 @@ nav ul li a:hover {
     left: -40px;
     right: -40px;
     bottom: -10px;
-    background: linear-gradient(135deg, maroon, white, navy);
+    background: linear-gradient(135deg, #ff0080, #7928ca);
     z-index: -1;
-    filter: blur(20px);
+    filter: blur(25px);
     opacity: 0.6;
     border-radius: 15px;
-    animation: pulseGlow 4s infinite;
+    animation: pulseGlow 7s infinite;
 }
 
 @keyframes pulseGlow {
@@ -83,34 +117,45 @@ nav ul li a:hover {
     0%,
     100% {
         transform: scale(1);
-        opacity: 0.6;
+        opacity: 0.4;
     }
 
     50% {
         transform: scale(1.05);
-        opacity: 0.9;
+        opacity: 0.7;
     }
 }
 
 .mainHeader p {
     padding-top: 40px;
-    color: black;
-    font-size: large;
+    color: #e0e0e0;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .container {
     width: 70vw;
     margin: 0 auto;
+    margin: 0 auto;
     padding: 0;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
 }
 
 .imgCheia {
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
 .imgCheia:hover {
@@ -119,17 +164,34 @@ nav ul li a:hover {
 }
 
 .txt {
-    padding: 100px 40px;
-    background-color: white;
-    color: black;
+    padding: 40px;
+    background: rgba(20, 20, 35, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: #eee;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    margin: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .txt p {
-    padding: 0 100px;
-    line-height: 2.0;
-    font-size: 1.2em;
+    padding: 0 50px;
+    line-height: 1.8;
+    font-size: 1.1em;
     text-align: center;
+    color: #ddd;
+}
+
+h2,
+h3 {
+    color: #00d2ff;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
 }
 
 .carrosselCont {
@@ -137,7 +199,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: -70px;
 }
 
@@ -195,12 +257,13 @@ nav ul li a:hover {
 .btnAnt,
 .btnProx {
     background-color: transparent;
-    color: maroon;
+    color: #00d2ff;
     border: none;
-    font-size: 2.5rem;
+    font-size: 3rem;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, color 0.3s;
     margin-bottom: 100px;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
 }
 
 .btnAnt:hover,
@@ -210,12 +273,34 @@ nav ul li a:hover {
 }
 
 .contato {
-    background-color: maroon;
+    background: rgba(40, 0, 0, 0.6);
+    /* Keeping slight maroon tint for brand contact but glassy */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 100, 100, 0.2);
     color: white;
-    border-radius: 10px;
-    padding: 80px 20px;
+    border-radius: 20px;
+    padding: 40px 20px;
     text-align: center;
-    margin: 300px auto 200px auto;
+    margin: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    margin: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.contato h2 {
+    margin-bottom: 40px;
+    /* Increased spacing for harmony */
+    color: #00d2ff;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
 }
 
 caption {
@@ -227,31 +312,42 @@ table {
     width: 100%;
     border-radius: 10px;
     border-collapse: separate;
-    background-color: white;
-    color: black;
+    background: rgba(255, 255, 255, 0.05);
+    /* Very transparent white */
+    color: #eee;
+    backdrop-filter: blur(5px);
 }
 
 table,
 th,
 td {
-    border: 1px solid maroon;
-    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
     text-align: center;
 }
 
 .formCont {
-    background-color: #f2f2f2;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 40px 20px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 150px auto;
+    /* Added extra space for large screens */
     max-width: 600px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     text-align: left;
 }
 
 .formCont h2 {
     text-align: center;
-    color: navy;
+    color: #00d2ff;
     margin-bottom: 30px;
 }
 
@@ -259,7 +355,7 @@ td {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #333;
+    color: #ddd;
 }
 
 .formCont button,
@@ -275,16 +371,19 @@ td {
 }
 
 .formCont button {
-    background-color: maroon;
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
     color: white;
     font-weight: bold;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
 }
 
 .formCont button:hover {
-    background-color: navy;
+    background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.6);
 }
 
 footer {
@@ -331,19 +430,35 @@ footer {
 
 @media (max-width: 768px) {
     nav ul {
-        gap: 15px;
+        gap: 10px;
+        flex-direction: row;
+        /* Ensure horizontal flow but wrap if needed */
+        flex-wrap: wrap;
+        padding: 5px;
     }
 
     nav ul li {
-        width: 20%;
-        float: left;
-        border-radius: 10px;
-        transition: background-color 5s;
+        width: auto;
+        /* Remove fixed width */
+        flex: 1 1 auto;
+        /* Allow flexible growth */
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .contato {
+        padding: 60px 10px;
+        /* Adjust padding for mobile */
+    }
+
+    .contato h2 {
+        margin-bottom: 30px;
+        /* Slightly less space on mobile but still distinct */
     }
 
     .txt p {
-        padding: 0 20px;
-        font-size: 1.1em;
+        padding: 0 15px;
+        font-size: 1.0em;
     }
 
     .formCont input,
@@ -353,6 +468,17 @@ footer {
 
     .slide video {
         height: 200px;
+    }
+
+    table,
+    th,
+    td {
+        font-size: 0.8em;
+        padding: 4px;
+    }
+
+    .imgCheia {
+        width: 80%;
     }
 }
 
@@ -366,13 +492,15 @@ footer {
 }
 
 .membro-card {
-    background-color: #f9f9f9;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 20px;
     width: 250px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .membro-card:hover {
@@ -389,14 +517,14 @@ footer {
 }
 
 .membro-card h3 {
-    color: navy;
+    color: #00d2ff;
     margin-bottom: 5px;
 }
 
 .membro-card p {
     font-size: 0.9em;
     padding: 0 10px;
-    color: #555;
+    color: #ccc;
     line-height: 1.4;
 }
 

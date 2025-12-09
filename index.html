@@ -15,12 +15,12 @@
         <ul>
             <li><a href="#top">Home</a></li>
             <li><a href="#mis">Missão</a></li>
-            <li><a href="#vis">Visão e Valores</a></li>
-            <li><a href="#mem">Membros</a></li>
+            <li><a href="#vis">Visão</a></li>
+            <li><a href="#mem">Time</a></li>
             <li><a href="#nos">Serviços</a></li>
-            <li><a href="#por">Diferenciais</a></li>
-            <li><a href="#con">Contato</a></li>
-            <li><a href="#formcontato">Fale Conosco!</a></li>
+            <li><a href="#por">Dif.</a></li>
+            <li><a href="#con">Hubs</a></li>
+            <li><a href="#formcontato">Contato</a></li>
         </ul>
     </nav>
     <main>
@@ -30,22 +30,18 @@
                 código.</p>
         </header>
 
-        <section class="container">
-            <img src="imagens/imagem1.jpg" alt="Estudantes GEP" class="imgCheia">
-        </section>
+
 
         <section class="txt fadeIn" id="mis">
+            <img src="imagens/imagem1.jpg" alt="Estudantes GEP" class="imgCheia">
             <h2>Missão</h2>
             <p>Nossa missão é democratizar o acesso a carreiras de tecnologia de alto nível. Capacitamos jovens de
                 comunidades periféricas com hard skills em desenvolvimento de software e skills de liderança, criando um
                 pipeline de talentos diverso para o futuro do trabalho.</p>
         </section>
 
-        <section class="container">
-            <img src="imagens/imagem2.jpg" alt="Equipe GEP" class="imgCheia">
-        </section>
-
         <div class="txt fadeIn" id="vis">
+            <img src="imagens/imagem2.jpg" alt="Equipe GEP" class="imgCheia">
             <h2>Visão</h2>
             <p>Nós da GEP Tech seremos a maior plataforma de mobilidade social através da tecnologia na América Latina
                 até 2030. Comprometidos com o trabalho decente e inovação, construímos pontes sólidas entre o potencial
@@ -87,6 +83,48 @@
             </div>
         </section>
 
+        <section class="txt fadeIn" id="nos">
+            <h2>Nossos Serviços</h2>
+            <div class="membros-grid">
+                <div class="membro-card">
+                    <h3>Capacitação em Tecnologia</h3>
+                    <p>Desenvolvimento web e mobile (HTML, CSS, JavaScript, PHP, SQL) para empresas com foco em
+                        projetos reais e portfólios.</p>
+                </div>
+                <div class="membro-card">
+                    <h3>Recrutamento Diverso</h3>
+                    <p>Conectamos empresas a talentos diversos, avaliados não apenas por código, mas por fit cultural,
+                        adaptabilidade e potencial de aprendizado.</p>
+                </div>
+                <div class="membro-card">
+                    <h3>Consultoria ESG</h3>
+                    <p>Apoiamos organizações na implementação de práticas sociais, oferecendo métricas claras de impacto
+                        e alinhamento aos ODS da ONU.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="txt fadeIn" id="por">
+            <h2>Nossos Diferenciais</h2>
+            <div class="membros-grid">
+                <div class="membro-card">
+                    <h3>Entrega Ágil</h3>
+                    <p>Desenvolvimento acelerado com SCRUM. Acompanhe a evolução do seu projeto com entregas semanais e
+                        total transparência.</p>
+                </div>
+                <div class="membro-card">
+                    <h3>Comunicação e Parceria</h3>
+                    <p>Mais que código, oferecemos parceiros de negócio. Nossa equipe alia excelência técnica com
+                        comunicação assertiva e proatividade.</p>
+                </div>
+                <div class="membro-card">
+                    <h3>Qualidade Big Tech</h3>
+                    <p>Projetos supervisionados por especialistas seniors de grandes empresas, garantindo arquitetura
+                        robusta, segura e escalável.</p>
+                </div>
+            </div>
+        </section>
+
         <div id="con" class="contato">
             <h2>Nossos Hubs de Inovação</h2>
             <table>
@@ -96,29 +134,33 @@
                     <th>Endereço</th>
                     <th>Cidade</th>
                     <th>Foco</th>
+                    <th>Telefone</th>
                 </tr>
                 <tr>
                     <td>Hub Pinheiros</td>
                     <td>Rua da Inovação, 123</td>
                     <td>São Paulo</td>
                     <td>SP</td>
+                    <td>(11) 2399-9999</td>
                 </tr>
                 <tr>
                     <td>Hub Campo Grande</td>
                     <td>Avenida do Conhecimento, 456</td>
                     <td>Rio de Janeiro</td>
                     <td>RJ</td>
+                    <td>(21) 2486-9999</td>
                 </tr>
                 <tr>
                     <td>Hub Norte</td>
                     <td>Praça da Tecnologia, 789</td>
                     <td>Belo Horizonte</td>
                     <td>MG</td>
+                    <td>(31) 2307-9978</td>
                 </tr>
             </table>
         </div>
         <div class="formCont fadeIn" id="formcontato">
-            <h2>Matricule-se já!</h2>
+            <h2>Fale Conosco!</h2>
             <form action="submit.php" method="post">
                 <label for="nome">Nome completo:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -129,9 +171,10 @@
                 <label for="unidade">Interesse:</label>
                 <select id="unidade" name="unidade" required>
                     <option value="">Selecione seu interesse</option>
-                    <option value="parceria">Quero ser Parceiro/Investidor</option>
-                    <option value="aluno">Quero ser Aluno</option>
-                    <option value="mentor">Quero ser Mentor Voluntário</option>
+                    <option value="dev_software">Desenvolvimento de Software</option>
+                    <option value="recrutamento">Recrutamento Tech & Diversidade</option>
+                    <option value="consultoria">Consultoria ESG</option>
+                    <option value="outros">Outros / Parcerias</option>
                 </select>
 
                 <button type="submit" id="btnform">Enviar</button>
@@ -141,6 +184,8 @@
             <p>&copy; 2025 GEP Tech - Tecnologia para Impacto Social.</p>
             <p>Entre em contato conosco pelo telefone (11) 4256-1234 ou pelo e-mail <a href="mailto:contato@geptech.org"
                     class="emailLink">contato@geptech.org</a></p>
+            <p style="margin-top: 15px; font-size: 0.8em; opacity: 0.5;"><a href="admin.php"
+                    style="color: white; text-decoration: none;">Área Administrativa</a></p>
         </footer>
 
         <button id="topBtn" title="Voltar ao topo">↑</button>
@@ -148,15 +193,15 @@
 
         <!-- Mensagens de sucesso/erro após envio -->
         <script>
-          const params = new URLSearchParams(window.location.search);
-          if (params.get('success') === '1') {
-            alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
-            history.replaceState(null, '', location.pathname);
-          }
-          if (params.get('error')) {
-            alert(decodeURIComponent(params.get('error')));
-            history.replaceState(null, '', location.pathname);
-          }
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('success') === '1') {
+                alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+                history.replaceState(null, '', location.pathname);
+            }
+            if (params.get('error')) {
+                alert(decodeURIComponent(params.get('error')));
+                history.replaceState(null, '', location.pathname);
+            }
         </script>
 </body>
 
