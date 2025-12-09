@@ -1,18 +1,163 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>GEP</title>
-  <link rel="stylesheet" href="gep-style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/css.css" />
+    <link rel="icon" href="imagens/logo.png" />
+    <title>GEP Tech</title>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="placeholder">
-      <img src="logo.png" alt="GEP logo" class="logo-img">
-      <h1 class="brand-name">GEP</h1>
-      <p class="subtitle">Startup de tecnologia</p>
-    </div>
-  </div>
+    <nav>
+        <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#mis">Missão</a></li>
+            <li><a href="#vis">Visão e Valores</a></li>
+            <li><a href="#mem">Membros</a></li>
+            <li><a href="#nos">Serviços</a></li>
+            <li><a href="#por">Diferenciais</a></li>
+            <li><a href="#con">Contato</a></li>
+            <li><a href="#formcontato">Fale Conosco!</a></li>
+        </ul>
+    </nav>
+    <main>
+        <header class="mainHeader" id="top">
+            <h1 class="tituloDecor">GEP Tech</h1>
+            <p>Conectando talentos sub-representados ao mercado global de tecnologia e transformando vidas através do
+                código.</p>
+        </header>
+
+        <section class="container">
+            <img src="imagens/imagem1.jpg" alt="Estudantes GEP" class="imgCheia">
+        </section>
+
+        <section class="txt fadeIn" id="mis">
+            <h2>Missão</h2>
+            <p>Nossa missão é democratizar o acesso a carreiras de tecnologia de alto nível. Capacitamos jovens de
+                comunidades periféricas com hard skills em desenvolvimento de software e skills de liderança, criando um
+                pipeline de talentos diverso para o futuro do trabalho.</p>
+        </section>
+
+        <section class="container">
+            <img src="imagens/imagem2.jpg" alt="Equipe GEP" class="imgCheia">
+        </section>
+
+        <div class="txt fadeIn" id="vis">
+            <h2>Visão</h2>
+            <p>Nós da GEP Tech seremos a maior plataforma de mobilidade social através da tecnologia na América Latina
+                até 2030. Comprometidos com o trabalho decente e inovação, construímos pontes sólidas entre o potencial
+                humano inexplorado e as oportunidades da economia digital global.</p>
+            <div class="carrosselCont">
+                <button class="btnAnt" aria-label="Anterior">◀</button>
+                <div class="carrosselVideos"></div>
+                <button class="btnProx" aria-label="Próximo">▶</button>
+            </div>
+        </div>
+
+        <div class="txt fadeIn" id="val">
+            <h2>Nossos Valores</h2>
+            <p><strong>Impacto Real:</strong>
+                Medimos sucesso por vidas transformadas.</p>
+            <p><strong>Inovação Inclusiva:</strong>
+                Tecnologia feita por todos, para todos.</p>
+            <p><strong>Comunidade:</strong>
+                Crescemos juntos, ninguém fica para trás.</p>
+        </div>
+
+        <section class="txt fadeIn" id="mem">
+            <h2>Nossos Líderes</h2>
+            <div class="membros-grid">
+                <div class="membro-card">
+                    <h3>Pedro Henrique, X</h3>
+                    <p><strong>SCRUM Master</strong><br>Especialista em Full Stack e Gerente da GEP Tech.</p>
+                </div>
+                <div class="membro-card">
+                    <h3>Guilherme Bezerra, 19</h3>
+                    <p><strong>Product Owner (PO)</strong><br>Especialista em alinhamento de equipe e desenvolvimento
+                        front-end.</p>
+                </div>
+                <div class="membro-card">
+                    <h3>Enrico Izzo, X</h3>
+                    <p><strong>Head do Time de Desenvolvimento</strong><br>Focado em desenvolver estratégias para a boa
+                        interação do usuário e especialista em desenvolvimento Full Stack.</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="con" class="contato">
+            <h2>Nossos Hubs de Inovação</h2>
+            <table>
+                <caption>Hubs de Tecnologia e Impacto - GEP Tech</caption>
+                <tr>
+                    <th>Hub</th>
+                    <th>Endereço</th>
+                    <th>Cidade</th>
+                    <th>Foco</th>
+                </tr>
+                <tr>
+                    <td>Hub Pinheiros</td>
+                    <td>Rua da Inovação, 123</td>
+                    <td>São Paulo</td>
+                    <td>SP</td>
+                </tr>
+                <tr>
+                    <td>Hub Campo Grande</td>
+                    <td>Avenida do Conhecimento, 456</td>
+                    <td>Rio de Janeiro</td>
+                    <td>RJ</td>
+                </tr>
+                <tr>
+                    <td>Hub Norte</td>
+                    <td>Praça da Tecnologia, 789</td>
+                    <td>Belo Horizonte</td>
+                    <td>MG</td>
+                </tr>
+            </table>
+        </div>
+        <div class="formCont fadeIn" id="formcontato">
+            <h2>Matricule-se já!</h2>
+            <form action="submit.php" method="post">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone celular:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+
+                <label for="unidade">Interesse:</label>
+                <select id="unidade" name="unidade" required>
+                    <option value="">Selecione seu interesse</option>
+                    <option value="parceria">Quero ser Parceiro/Investidor</option>
+                    <option value="aluno">Quero ser Aluno</option>
+                    <option value="mentor">Quero ser Mentor Voluntário</option>
+                </select>
+
+                <button type="submit" id="btnform">Enviar</button>
+            </form>
+        </div>
+        <footer>
+            <p>&copy; 2025 GEP Tech - Tecnologia para Impacto Social.</p>
+            <p>Entre em contato conosco pelo telefone (11) 4256-1234 ou pelo e-mail <a href="mailto:contato@geptech.org"
+                    class="emailLink">contato@geptech.org</a></p>
+        </footer>
+
+        <button id="topBtn" title="Voltar ao topo">↑</button>
+        <script src="scripts/jscript.js"></script>
+
+        <!-- Mensagens de sucesso/erro após envio -->
+        <script>
+          const params = new URLSearchParams(window.location.search);
+          if (params.get('success') === '1') {
+            alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+            history.replaceState(null, '', location.pathname);
+          }
+          if (params.get('error')) {
+            alert(decodeURIComponent(params.get('error')));
+            history.replaceState(null, '', location.pathname);
+          }
+        </script>
 </body>
+
 </html>
