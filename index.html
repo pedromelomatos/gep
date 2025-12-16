@@ -19,7 +19,6 @@
             <li><a href="#mem">Time</a></li>
             <li><a href="#nos">Serviços</a></li>
             <li><a href="#por">Dif.</a></li>
-            <li><a href="#con">Hubs</a></li>
             <li><a href="#formcontato">Contato</a></li>
         </ul>
     </nav>
@@ -29,8 +28,6 @@
             <p>Conectando talentos sub-representados ao mercado global de tecnologia e transformando vidas através do
                 código.</p>
         </header>
-
-
 
         <section class="txt fadeIn" id="mis">
             <img src="imagens/imagem1.jpg" alt="Estudantes GEP" class="imgCheia">
@@ -53,32 +50,81 @@
             </div>
         </div>
 
-        <div class="txt fadeIn" id="val">
-            <h2>Nossos Valores</h2>
-            <p><strong>Impacto Real:</strong>
-                Medimos sucesso por vidas transformadas.</p>
-            <p><strong>Inovação Inclusiva:</strong>
-                Tecnologia feita por todos, para todos.</p>
-            <p><strong>Comunidade:</strong>
-                Crescemos juntos, ninguém fica para trás.</p>
+    <section class="txt fadeIn" id="val">
+        <h2>Nossos Valores</h2>
+
+        <div class="membros-grid valores-grid">
+            <div class="membro-card valor-card">
+                <h3>Impacto Real</h3>
+                <p>Medimos sucesso por vidas transformadas.</p>
+            </div>
+
+            <div class="membro-card valor-card">
+                <h3>Inovação Inclusiva</h3>
+                <p>Tecnologia feita por todos, para todos.</p>
+            </div>
+
+            <div class="membro-card valor-card">
+                <h3>Comunidade</h3>
+                <p>Crescemos juntos, ninguém fica para trás.</p>
+            </div>
         </div>
+    </section>
+
 
         <section class="txt fadeIn" id="mem">
             <h2>Nossos Líderes</h2>
             <div class="membros-grid">
-                <div class="membro-card">
-                    <h3>Pedro Henrique, X</h3>
-                    <p><strong>SCRUM Master</strong><br>Especialista em Full Stack e Gerente da GEP Tech.</p>
+
+                <!-- Pedro -->
+                <div class="membro-card" id="card-pedro">
+                    <h3>Pedro Henrique, 19</h3>
+                    <p><strong>SCRUM Master</strong><br>Estudante de ADS, focado em desenvolvimento web e organização de equipes.</p>
+
+                    <div class="swot-mini">
+                        <strong>Resumo SWOT:</strong> Forças em programação web e Git; fraquezas: pouca experiência prática.
+                    </div>
+
+                    <button class="btn-swot"
+                            aria-haspopup="dialog"
+                            aria-controls="swotModalPedro"
+                            onclick="openModal('swotModalPedro', this)">
+                        Ver Análise SWOT
+                    </button>
                 </div>
-                <div class="membro-card">
+
+                <!-- Guilherme -->
+                <div class="membro-card" id="card-guilherme">
                     <h3>Guilherme Bezerra, 19</h3>
-                    <p><strong>Product Owner (PO)</strong><br>Especialista em alinhamento de equipe e desenvolvimento
-                        front-end.</p>
+                    <p><strong>Product Owner (PO)</strong><br>Especialista em alinhamento de equipe e desenvolvimento front-end.</p>
+
+                    <div class="swot-mini">
+                        <strong>Resumo SWOT:</strong> Mentalidade de aprendizado; organização e proficiência em inglês.
+                    </div>
+
+                    <button class="btn-swot"
+                            aria-haspopup="dialog"
+                            aria-controls="swotModalGuilherme"
+                            onclick="openModal('swotModalGuilherme', this)">
+                        Ver Análise SWOT
+                    </button>
                 </div>
-                <div class="membro-card">
-                    <h3>Enrico Izzo, X</h3>
-                    <p><strong>Head do Time de Desenvolvimento</strong><br>Focado em desenvolver estratégias para a boa
-                        interação do usuário e especialista em desenvolvimento Full Stack.</p>
+
+                <!-- Enrico -->
+                <div class="membro-card" id="card-enrico">
+                    <h3>Enrico Izzo, 18</h3>
+                    <p><strong>Head do Time de Desenvolvimento</strong><br>Focado em UX e desenvolvimento Full Stack.</p>
+
+                    <div class="swot-mini">
+                        <strong>Resumo SWOT:</strong> Liderança técnica e forte visão de UX.
+                    </div>
+
+                    <button class="btn-swot"
+                            aria-haspopup="dialog"
+                            aria-controls="swotModalEnrico"
+                            onclick="openModal('swotModalEnrico', this)">
+                        Ver Análise SWOT
+                    </button>
                 </div>
             </div>
         </section>
@@ -125,40 +171,6 @@
             </div>
         </section>
 
-        <div id="con" class="contato">
-            <h2>Nossos Hubs de Inovação</h2>
-            <table>
-                <caption>Hubs de Tecnologia e Impacto - GEP Tech</caption>
-                <tr>
-                    <th>Hub</th>
-                    <th>Endereço</th>
-                    <th>Cidade</th>
-                    <th>Foco</th>
-                    <th>Telefone</th>
-                </tr>
-                <tr>
-                    <td>Hub Pinheiros</td>
-                    <td>Rua da Inovação, 123</td>
-                    <td>São Paulo</td>
-                    <td>SP</td>
-                    <td>(11) 2399-9999</td>
-                </tr>
-                <tr>
-                    <td>Hub Campo Grande</td>
-                    <td>Avenida do Conhecimento, 456</td>
-                    <td>Rio de Janeiro</td>
-                    <td>RJ</td>
-                    <td>(21) 2486-9999</td>
-                </tr>
-                <tr>
-                    <td>Hub Norte</td>
-                    <td>Praça da Tecnologia, 789</td>
-                    <td>Belo Horizonte</td>
-                    <td>MG</td>
-                    <td>(31) 2307-9978</td>
-                </tr>
-            </table>
-        </div>
         <div class="formCont fadeIn" id="formcontato">
             <h2>Fale Conosco!</h2>
             <form action="submit.php" method="post">
@@ -180,6 +192,7 @@
                 <button type="submit" id="btnform">Enviar</button>
             </form>
         </div>
+
         <footer>
             <p>&copy; 2025 GEP Tech - Tecnologia para Impacto Social.</p>
             <p>Entre em contato conosco pelo telefone (11) 4256-1234 ou pelo e-mail <a href="mailto:contato@geptech.org"
@@ -189,7 +202,317 @@
         </footer>
 
         <button id="topBtn" title="Voltar ao topo">↑</button>
+
+        <!-- Modal: SWOT do Pedro -->
+        <div class="modal" id="swotModalPedro" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="swotPedroTitle">
+            <div class="modal-overlay" data-action="close"></div>
+
+            <div class="modal-content" role="document">
+                <div class="modal-header">
+                    <h3 id="swotPedroTitle">Análise SWOT — Pedro Henrique Melo Matos</h3>
+                    <button class="modal-close" aria-label="Fechar janela" data-action="close">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Esta análise é uma visão pessoal e estratégica dos pontos-chave para desenvolvimento acadêmico e profissional.</p>
+
+                    <div class="modal-grid" aria-hidden="false">
+                        <div class="box">
+                            <strong>Forças</strong>
+                            <ul>
+                                <li>Conhecimento em HTML, CSS, JavaScript</li>
+                                <li>Git/GitHub</li>
+                                <li>Organização</li>
+                                <li>Facilidade de aprendizado e leitura técnica em inglês</li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <strong>Fraquezas</strong>
+                            <ul>
+                                <li>Pouca experiência profissional real</li>
+                                <li>Dificuldade inicial na conversação em inglês</li>
+                                <li>Necessidade de aprofundar bancos de dados e arquitetura</li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <strong>Oportunidades</strong>
+                            <ul>
+                                <li>Projetos acadêmicos e de extensão no IFSP</li>
+                                <li>Cursos online</li>
+                                <li>Crescimento do mercado tech e trabalho remoto</li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <strong>Ameaças</strong>
+                            <ul>
+                                <li>Alta concorrência</li>
+                                <li>Evolução rápida de tecnologias</li>
+                                <li>Possíveis limitações financeiras no curto prazo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <small>Use ESC para fechar ou clique fora do modal.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: SWOT do Guilherme -->
+        <div class="modal" id="swotModalGuilherme" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="swotGuilhermeTitle">
+            <div class="modal-overlay" data-action="close"></div>
+
+            <div class="modal-content" role="document">
+                <div class="modal-header">
+                    <h3 id="swotGuilhermeTitle">Análise SWOT — Guilherme Bezerra</h3>
+                    <button class="modal-close" aria-label="Fechar janela" data-action="close">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Resumo estratégico das competências e desafios de Guilherme.</p>
+
+                    <div class="modal-grid" aria-hidden="false">
+                        <div class="box">
+                            <strong>Forças</strong>
+                            <ul>
+                                <li>Mentalidade de aprendizado contínuo e abertura a feedbacks</li>
+                                <li>Familiaridade com PHP, HTML, JavaScript e SQL</li>
+                                <li>Proficiência em inglês; espanhol intermediário</li>
+                                <li>Organização e gestão de equipe</li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <strong>Fraquezas</strong>
+                            <ul>
+                                <li>Pouca experiência prática como PO e em gestão de produtos</li>
+                                <li>Conhecimento limitado de negócio, métricas e mercado</li>
+                                <li>Pouco domínio de linguagens requisitadas como Java e C#</li>
+                                <li>Conhecimento limitado sobre GIT e GitHub</li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <strong>Oportunidades</strong>
+                            <ul>
+                                <li>Crescimento ao unir teoria com prática real</li>
+                                <li>Possibilidade de se tornar referência interna pelo domínio do produto</li>
+                                <li>Networking com devs, designers e clientes</li>
+                                <li>Alta demanda por produtos digitais e soluções web</li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <strong>Ameaças</strong>
+                            <ul>
+                                <li>Alta pressão por resultados rápidos (startups)</li>
+                                <li>Risco de decisões erradas impactarem o negócio</li>
+                                <li>Concorrência com POs mais experientes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <small>Use ESC para fechar ou clique fora do modal.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: SWOT do Enrico -->
+        <div class="modal" id="swotModalEnrico" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="swotEnricoTitle">
+            <div class="modal-overlay" data-action="close"></div>
+
+            <div class="modal-content" role="document">
+                <div class="modal-header">
+                    <h3 id="swotEnricoTitle">Análise SWOT — Enrico Izzo</h3>
+                    <button class="modal-close" aria-label="Fechar janela" data-action="close">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Resumo estratégico das competências e desafios de Enrico.</p>
+
+                    <div class="modal-grid" aria-hidden="false">
+                        <div class="box">
+                            <strong>Forças</strong>
+                            <ul>
+                                <li>Domínio de desenvolvimento Full Stack (Front e Back)</li>
+                                <li>Visão estratégica de User Experience (UX)</li>
+                                <li>Capacidade de liderança e gestão de equipe técnica</li>
+                                <li>Facilidade em resolver problemas complexos de código</li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <strong>Fraquezas</strong>
+                            <ul>
+                                <li>Tendência a centralizar tarefas técnicas (pela posição de liderança)</li>
+                                <li>Dificuldade com o GitHub</li>
+                                <li>Gestão de tempo entre codificar e gerenciar o time</li>
+                                <li>Necessidade de aprofundar em infraestrutura (DevOps/Cloud)</li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <strong>Oportunidades</strong>
+                            <ul>
+                                <li>Alta demanda por desenvolvedores Full Stack</li>
+                                <li>Aplicar projeto da startup em portfólio real</li>
+                                <li>Crescimento da área de UX/UI Design</li>
+                                <li>Mentoria e networking no ambiente acadêmico do IFSP</li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <strong>Ameaças</strong>
+                            <ul>
+                                <li>Rápida obsolescência de frameworks e linguagens</li>
+                                <li>Alta competitividade para cargos de liderança júnior</li>
+                                <li>Sobrecarga de trabalho acumulando gestão e desenvolvimento</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <small>Use ESC para fechar ou clique fora do modal.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- seu script principal (se houver) -->
         <script src="scripts/jscript.js"></script>
+
+        <!-- Script do modal (focus trap, ESC, overlay click, retorno de foco) -->
+        <script>
+            (function () {
+                // utility: seletores de elementos focáveis
+                const FOCUSABLE = 'a[href], area[href], input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex^="-"])';
+
+                function openModal(modalId, openerBtn) {
+                    const modal = document.getElementById(modalId);
+                    if (!modal) return;
+                    // save opener to return focus later
+                    modal.dataset.opener = openerBtn ? (openerBtn.id || '') : '';
+                    // show modal
+                    modal.classList.add('open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.documentElement.classList.add('modal-open'); // prevents background scroll
+                    document.body.classList.add('modal-open');
+
+                    // find focusable elements
+                    const focusable = Array.from(modal.querySelectorAll(FOCUSABLE));
+                    // focus first focusable element (close button ideally)
+                    const first = focusable[0];
+                    if (first) first.focus();
+
+                    // attach handlers
+                    modal.addEventListener('keydown', trapTabKey);
+                }
+
+                function closeModal(modalId) {
+                    const modal = document.getElementById(modalId);
+                    if (!modal) return;
+                    modal.classList.remove('open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.documentElement.classList.remove('modal-open');
+                    document.body.classList.remove('modal-open');
+
+                    // remove handlers
+                    modal.removeEventListener('keydown', trapTabKey);
+
+                    // return focus to opener if present
+                    const openerSelector = modal.dataset.opener;
+                    if (openerSelector) {
+                        const openerEl = openerSelector ? document.getElementById(openerSelector) : null;
+                        if (openerEl) openerEl.focus();
+                    }
+                }
+
+                function trapTabKey(e) {
+                    if (e.key !== 'Tab') return;
+                    const modal = e.currentTarget;
+                    const focusable = Array.from(modal.querySelectorAll(FOCUSABLE));
+                    if (focusable.length === 0) {
+                        e.preventDefault();
+                        return;
+                    }
+                    const first = focusable[0];
+                    const last = focusable[focusable.length - 1];
+                    if (e.shiftKey) {
+                        if (document.activeElement === first) {
+                            e.preventDefault();
+                            last.focus();
+                        }
+                    } else {
+                        if (document.activeElement === last) {
+                            e.preventDefault();
+                            first.focus();
+                        }
+                    }
+                }
+
+                // global click handler for overlay and close buttons
+                document.addEventListener('click', function (e) {
+                    const action = e.target.getAttribute('data-action');
+                    if (action === 'close') {
+                        // find the nearest modal ancestor
+                        const modal = e.target.closest('.modal');
+                        if (modal) closeModal(modal.id);
+                    }
+                }, false);
+
+                // open modal from inline onclick (exposed)
+                window.openModal = function (id, btn) {
+                    // optional: set id to opener btn for returning focus
+                    if (btn && !btn.id) {
+                        // ensure opener has an id for return focus
+                        btn.id = 'opener-' + Math.random().toString(36).slice(2, 9);
+                    }
+                    openModal(id, btn);
+                };
+
+                // close modal exposed
+                window.closeModal = function (id) {
+                    closeModal(id);
+                };
+
+                // ESC key closes currently open modal(s)
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' || e.key === 'Esc') {
+                        const openModalEl = document.querySelector('.modal.open');
+                        if (openModalEl) {
+                            closeModal(openModalEl.id);
+                        }
+                    }
+                });
+
+                // prevent clicks inside modal-content from closing (overlay is separate)
+                document.addEventListener('click', function (e) {
+                    const content = e.target.closest('.modal-content');
+                    if (content) {
+                        // click inside modal content: do nothing (not treated as overlay click)
+                        return;
+                    }
+                });
+
+                // progressive enhancement: allow keyboard open when button focused and Enter/Space pressed
+                document.addEventListener('keydown', function (e) {
+                    const active = document.activeElement;
+                    if (active && active.classList && active.classList.contains('btn-swot')) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            const modalId = active.getAttribute('aria-controls');
+                            if (modalId) openModal(modalId, active);
+                        }
+                    }
+                });
+            })();
+        </script>
 
         <!-- Mensagens de sucesso/erro após envio -->
         <script>
