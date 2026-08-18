@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/css.css" />
+    <link rel="icon" href="imagens/logo.png" />
+    <title>Demandante | GEP Tech</title>
+</head>
+
+<body>
+    <nav class="site-nav" aria-label="Navegação principal">
+        <a class="brand" href="index.html#top" aria-label="GEP Tech - início">
+            <img src="imagens/logo.png" alt="Logotipo GEP Tech" />
+            <span>GEP Tech</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="menu-principal" class="nav-menu">
+            <li><a class="nav-link" href="index.html#top">Home</a></li>
+            <li><a class="nav-link" href="index.html#mis">Missão</a></li>
+            <li><a class="nav-link" href="index.html#vis">Visão</a></li>
+            <li><a class="nav-link" href="index.html#val">Valores</a></li>
+            <li><a class="nav-link" href="index.html#mem">Time</a></li>
+            <li><a class="nav-link" href="index.html#nos">Serviços</a></li>
+            <li><a class="nav-link" href="index.html#por">Diferenciais</a></li>
+            <li><a class="nav-link active" href="demandante.html">Demandante</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-main demandante-page">
+        <header class="page-hero fadeIn" id="top">
+            <div class="section-kicker">Projeto de extensão</div>
+            <h1>Conheça o Demandante</h1>
+            <p>Esta página apresenta o demandante e a origem da proposta desenvolvida neste protótipo acadêmico de extensão.</p>
+        </header>
+
+        <section class="video-feature fadeIn" aria-labelledby="video-title">
+            <h2 id="video-title">Origem da proposta</h2>
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/Ma6cRzx2S7Q" title="Vídeo sobre o demandante e a proposta do projeto de extensão" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="txt demandante-section fadeIn" aria-labelledby="sobre-demandante">
+            <div class="section-kicker">Demandante</div>
+            <h2 id="sobre-demandante">Sobre o demandante</h2>
+            <p>O Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP), por meio da área de Extensão, apresentou a demanda que deu origem a este projeto. A proposta está relacionada à melhoria da experiência de publicação, consulta e matrícula em Cursos de Extensão.</p>
+        </section>
+
+        <section class="txt demandante-section fadeIn" aria-labelledby="a-demanda">
+            <div class="section-kicker">Cursos de Extensão</div>
+            <h2 id="a-demanda">A demanda</h2>
+            <p>A proposta busca tornar a área de Cursos de Extensão mais simples, clara e eficiente para quem publica os cursos e para quem procura oportunidades de formação.</p>
+            <div class="audience-grid">
+                <article class="membro-card audience-card">
+                    <span class="card-icon" aria-hidden="true">▣</span>
+                    <h3>Professores e responsáveis</h3>
+                    <p>O protótipo propõe facilitar o cadastro e a publicação de novos Cursos de Extensão, reduzindo etapas manuais e tornando o preenchimento mais guiado.</p>
+                    <p>Uma funcionalidade proposta é o envio de um documento PDF com as informações do curso, permitindo que o sistema identifique automaticamente os principais campos e auxilie no preenchimento do cadastro.</p>
+                </article>
+                <article class="membro-card audience-card">
+                    <span class="card-icon" aria-hidden="true">◇</span>
+                    <h3>Alunos e interessados</h3>
+                    <p>A experiência também foi pensada para facilitar a descoberta dos cursos, a consulta de informações, a visualização de detalhes, o entendimento dos requisitos e a solicitação de matrícula.</p>
+                    <p>A referência de organização é uma navegação clara e consultável, inspirada em catálogos educacionais como o CNCT do MEC.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="txt demandante-section fadeIn" aria-labelledby="necessidades">
+            <div class="section-kicker">Pontos da solução</div>
+            <h2 id="necessidades">Principais necessidades</h2>
+            <div class="membros-grid needs-grid">
+                <article class="membro-card need-card">
+                    <span class="card-icon" aria-hidden="true">01</span>
+                    <h3>Cadastro mais simples</h3>
+                    <p>Facilitar a criação de novos Cursos de Extensão e reduzir preenchimentos repetitivos.</p>
+                </article>
+                <article class="membro-card need-card">
+                    <span class="card-icon" aria-hidden="true">02</span>
+                    <h3>Leitura de PDF</h3>
+                    <p>Propor extração automática de informações de documentos PDF para auxiliar o cadastro.</p>
+                </article>
+                <article class="membro-card need-card">
+                    <span class="card-icon" aria-hidden="true">03</span>
+                    <h3>Organização dos cursos</h3>
+                    <p>Melhorar a apresentação das informações para consulta rápida e comparação entre cursos.</p>
+                </article>
+                <article class="membro-card need-card">
+                    <span class="card-icon" aria-hidden="true">04</span>
+                    <h3>Consulta intuitiva</h3>
+                    <p>Tornar a descoberta, os detalhes e os requisitos dos cursos mais fáceis de entender.</p>
+                </article>
+                <article class="membro-card need-card">
+                    <span class="card-icon" aria-hidden="true">05</span>
+                    <h3>Matrícula simplificada</h3>
+                    <p>Apoiar um fluxo mais direto para que interessados possam solicitar matrícula com menos atrito.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="txt objective-section fadeIn" aria-labelledby="objetivo-projeto">
+            <div class="section-kicker">Objetivo do projeto</div>
+            <h2 id="objetivo-projeto">Objetivo do projeto</h2>
+            <p>Desenvolver e prototipar uma experiência mais simples, organizada e intuitiva para a área de Cursos de Extensão do IFSP, facilitando tanto a publicação de novos cursos pelos responsáveis quanto a consulta e matrícula pelos interessados.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GEP Tech - Tecnologia para Impacto Social.</p>
+        <p>Av. Salgado Filho, 3501, Centro, Guarulhos, SP</p>
+        <p>Entre em contato conosco pelos e-mails <a href="mailto:melo.matos@aluno.ifsp.edu.br" class="emailLink">melo.matos@aluno.ifsp.edu.br</a>, <a href="mailto:enrico.dutra@aluno.ifsp.edu.br" class="emailLink">enrico.dutra@aluno.ifsp.edu.br</a>, <a href="mailto:bezerra.castro@aluno.ifsp.edu.br" class="emailLink">bezerra.castro@aluno.ifsp.edu.br</a></p>
+    </footer>
+
+    <button id="topBtn" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+    <script src="scripts/jscript.js"></script>
+</body>
+
+</html>
